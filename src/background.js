@@ -4,15 +4,16 @@ import {
   app,
   protocol,
   BrowserWindow
-} from 'electron'
+} from 'electron';
 import {
   createProtocol,
   installVueDevtools
-} from 'vue-cli-plugin-electron-builder/lib'
+} from 'vue-cli-plugin-electron-builder/lib';
+import './backend';
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
-let win
+let win;
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{
